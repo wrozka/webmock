@@ -90,11 +90,11 @@ if defined?(EventMachine::HttpRequest)
         if @req
           options = @req.options
           method = @req.method
-          uri = @req.uri.dup
+          uri = @req.uri.clone
         else
           options = @options
           method = @method
-          uri = @uri.dup
+          uri = @uri.clone
         end
 
         if options[:authorization] || options['authorization']
